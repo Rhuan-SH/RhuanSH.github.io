@@ -1,8 +1,12 @@
 /* Reset e base */
-body {
-  font-family: 'Segoe UI', sans-serif;
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
   background-color: #f4f6f8;
   color: #2c3e50;
   line-height: 1.6;
@@ -11,14 +15,14 @@ body {
 /* Cabeçalho */
 header {
   background: linear-gradient(135deg, #2c3e50, #34495e);
-  color: #ffffff;
-  padding: 40px 20px;
+  color: #fff;
+  padding: 60px 20px;
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
 header h1 {
-  font-size: 2.5em;
+  font-size: 2.8em;
   margin-bottom: 10px;
 }
 
@@ -29,24 +33,29 @@ header p {
 
 /* Seções */
 section {
-  padding: 30px 40px;
-  max-width: 900px;
+  max-width: 960px;
   margin: 40px auto;
+  padding: 30px 40px;
   background-color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+section:hover {
+  transform: scale(1.01);
 }
 
 /* Títulos */
 h2 {
-  color: #34495e;
   font-size: 1.8em;
+  color: #34495e;
   margin-bottom: 20px;
   border-bottom: 2px solid #ecf0f1;
   padding-bottom: 5px;
 }
 
-/* Lista de projetos */
+/* Listas */
 ul {
   list-style: none;
   padding: 0;
@@ -54,24 +63,43 @@ ul {
 
 li {
   background-color: #ecf0f1;
-  margin: 12px 0;
-  padding: 15px 20px;
-  border-radius: 8px;
-  transition: transform 0.2s ease;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  margin: 15px 0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: background-color 0.3s ease;
 }
 
 li:hover {
-  transform: scale(1.02);
+  background-color: #dfe6e9;
 }
 
 /* Rodapé */
 footer {
   text-align: center;
-  padding: 20px;
+  padding: 25px;
   background-color: #2c3e50;
   color: #ffffff;
-  font-size: 0.9em;
+  font-size: 0.95em;
   margin-top: 60px;
-  box-shadow: 0 -2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.1);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  section {
+    padding: 20px;
+  }
+
+  header h1 {
+    font-size: 2em;
+  }
+
+  header p {
+    font-size: 1em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
 }
